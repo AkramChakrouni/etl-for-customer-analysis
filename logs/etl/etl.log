@@ -1,0 +1,22 @@
+2024-11-14 00:33:43,324 - root - INFO - Starting ETL process
+2024-11-14 00:33:43,326 - root - INFO - Starting data extract process for: /Users/akram/DataScienceProjects/customer-churn-prediction/data/WA_Fn-UseC_-Telco-Customer-Churn.csv
+2024-11-14 00:33:43,326 - root - INFO - Opening file: /Users/akram/DataScienceProjects/customer-churn-prediction/data/WA_Fn-UseC_-Telco-Customer-Churn.csv
+2024-11-14 00:33:43,355 - root - INFO - Data succesfully extracted from: /Users/akram/DataScienceProjects/customer-churn-prediction/data/WA_Fn-UseC_-Telco-Customer-Churn.csv
+2024-11-14 00:33:43,355 - root - INFO - Opening configuration file: /Users/akram/DataScienceProjects/customer-churn-prediction/configuration/etl/data_columns.yaml
+2024-11-14 00:33:43,361 - root - INFO - Configuration file loaded successfully
+2024-11-14 00:33:43,361 - root - INFO - Schema validation passed. All required columns are present.
+2024-11-14 00:33:43,363 - root - INFO - Starting data transform process
+2024-11-14 00:33:43,363 - root - INFO - Opening configuration file: /Users/akram/DataScienceProjects/customer-churn-prediction/configuration/etl/data_columns.yaml
+2024-11-14 00:33:43,367 - root - INFO - Configuration file loaded successfully
+2024-11-14 00:33:43,370 - root - INFO - Starting normalization process
+2024-11-14 00:33:43,371 - root - INFO - Normalization process completed
+2024-11-14 00:33:43,371 - root - INFO - Starting label encoding process
+2024-11-14 00:33:43,379 - root - INFO - Label encoding process completed
+2024-11-14 00:33:43,379 - root - INFO - Starting one hot encoding process
+2024-11-14 00:33:43,382 - root - INFO - One hot encoding process completed
+2024-11-14 00:33:43,382 - root - INFO - Starting label encoding process
+2024-11-14 00:33:43,386 - root - INFO - Label encoding process completed
+2024-11-14 00:33:43,386 - root - INFO - Data transform process completed
+2024-11-14 00:33:43,387 - root - INFO - Starting data load process
+2024-11-14 00:33:43,400 - root - INFO - Data successfully loaded into database at /Users/akram/DataScienceProjects/customer-churn-prediction/data_warehouse/customers.db
+2024-11-14 00:33:43,400 - root - INFO - ETL process completed

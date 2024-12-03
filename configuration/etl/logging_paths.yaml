@@ -1,0 +1,14 @@
+# This YAML file contains the paths to the log files for the ETL process.
+
+etl:
+  extract:
+    /Users/akram/DataScienceProjects/customer-churn-prediction/logs/etl/extract.log
+
+  transform:
+    /Users/akram/DataScienceProjects/customer-churn-prediction/logs/etl/transform.log
+
+  load:
+    /Users/akram/DataScienceProjects/customer-churn-prediction/logs/etl/load.log
+
+  etl:
+    /Users/akram/DataScienceProjects/customer-churn-prediction/logs/etl/etl.log

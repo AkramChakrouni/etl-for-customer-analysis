@@ -1,0 +1,71 @@
+# This YAML files contains the expected columns for loading a new source file into the ETL pipeline.
+# The reason of it being written here is to make it easier to update the expected columns, to avoid hardcoding them in the code.
+
+columns:
+  # Required columns for the ETL pipeline to load a new source file
+  required_columns_to_load:
+    - customerID
+    - gender
+    - SeniorCitizen
+    - Partner
+    - Dependents
+    - tenure
+    - PhoneService
+    - MultipleLines
+    - InternetService
+    - OnlineSecurity
+    - OnlineBackup
+    - DeviceProtection
+    - TechSupport
+    - StreamingTV
+    - StreamingMovies
+    - Contract
+    - PaperlessBilling
+    - PaymentMethod
+    - MonthlyCharges
+    - TotalCharges
+    - Churn
+
+  # Columns that need to be changed to numeric
+  columns_to_change_from_object_to_numeric:
+    - TotalCharges
+
+  # These columns do not have any inherent order. 
+  # In other words, they aren't ranked or ordinal (like "Low", "Medium", "High"). 
+  # Label Encoding would assign numeric values (e.g., 0, 1, 2), 
+  # but this could mistakenly suggest an ordinal relationship between the categories that doesn’t exist.
+  columns_one_hot_encode:
+    - gender
+    - InternetService
+    - PaymentMethod
+
+  # Columns that need to be changed to binary
+  # 'No' -> 0, 'Yes' -> 1
+  # Otherwise mentioned next to the column name
+  columns_label_encode:
+    - Partner
+    - Contract  # Month-to-month -> 0, One year -> 1, Two year -> 2
+    - Dependents
+    - PhoneService
+    - PaperlessBilling
+    - Churn
+
+  # These columns depend on another column yes or no value
+  # If dependent column is 'No', then the value of the column is 2
+  columns_that_depend_on_another_column:
+    - MultipleLines
+    - OnlineSecurity
+    - OnlineBackup
+    - DeviceProtection
+    - TechSupport
+    - StreamingTV
+    - StreamingMovies
+  
+
+  # Columns that need to be normalized
+  columns_to_normalize:
+    - tenure
+    - MonthlyCharges
+    - TotalCharges
+
+
